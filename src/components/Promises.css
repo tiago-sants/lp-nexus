@@ -1,0 +1,94 @@
+.promises {
+    background: linear-gradient(135deg, var(--black) 0%, #1a1a1a 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.promises::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 20% 50%, rgba(255, 136, 6, 0.15) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.promises-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.badge-light {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.2);
+    color: var(--white);
+}
+
+.text-white {
+    color: var(--white);
+}
+
+.promises-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    margin-bottom: 60px;
+}
+
+.promise-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 24px;
+    padding: 40px 32px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.promise-card:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-8px);
+}
+
+.promise-icon {
+    font-size: 56px;
+    margin-bottom: 24px;
+}
+
+.promise-card h3 {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 12px;
+    line-height: 1.3;
+}
+
+.promise-card p {
+    font-size: 16px;
+    color: var(--gray-400);
+    line-height: 1.6;
+}
+
+.promises-cta {
+    text-align: center;
+    padding-top: 40px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.promises-cta p {
+    font-size: 20px;
+    color: var(--gray-300);
+    margin-bottom: 24px;
+}
+
+@media (max-width: 900px) {
+    .promises-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .promise-card {
+        padding: 32px 24px;
+    }
+}
